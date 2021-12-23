@@ -1,0 +1,36 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    /* align-items: center; */
+}
+.thumbnails-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-height: 25vh;
+    overflow-y: auto;
+    justify-content: space-around;
+    list-style: none;
+}
+.thumbnails-image {
+    width: 20vw;
+    height: 15vw;
+}
+.details-image{
+    width: 75vw;
+    height: 50vw;
+}
+.details-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.thumbnails-title{
+    display: block;
+    text-align: center;
+}
+.thumbnails-item{
+    margin-top: 2vh;
+    margin-left: 2vw;
+}
