@@ -3,6 +3,7 @@ body {
     flex-direction: column;
     justify-content:space-around;
     /* align-items: center; */
+    /* text-align: center; */
 }
 .thumbnails-list {
     display: flex;
@@ -12,16 +13,21 @@ body {
     overflow-y: auto;
     justify-content: space-around;
     list-style: none;
+    padding: 0;
+    padding-top: 2.5vh;
+
 }
 .thumbnails-image {
     width: 20vw;
-    height: 15vw;
+    height: 18vw;
+    display: block;
 }
 .details-image{
     width: 75vw;
     height: 50vw;
 }
 .details-container{
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -29,8 +35,66 @@ body {
 .thumbnails-title{
     display: block;
     text-align: center;
+    background-color: beige;
+    color: blue;
+    font-size: 1.2rem;
 }
 .thumbnails-item{
     margin-top: 2vh;
     margin-left: 2vw;
+    border: 1px solid blue;
+}
+.thumbnails-anchor{
+    text-decoration: none;
+}
+.details-title{
+    background-color: cornsilk;
+    position: absolute;
+    /* left: 3vw; */
+    bottom: 2vw;
+
+}
+.logo-title{
+    background-color: fuchsia;
+    color: ghostwhite;
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+body, html{
+    height: 100%;
+}
+@media (min-width: 568px) {
+    .thumbnails-list{
+        flex-direction: column;
+        flex-wrap: nowrap;
+        order: -1;
+        max-height: 360px;
+        top: 1px;
+        display: flow-root;
+        position: relative;
+    }
+    .thumbnails-title{
+        width: 20vw;
+    }
+    .thumbnails-item{
+        max-width: 20vw;   
+    }
+    .logo-title{
+        position: absolute;
+        left: 168px;
+        display: inline-block;
+        
+    }
+    .details-container{
+        position: absolute;
+        top: 20px;
+        left: 168px;
+
+    }
+    .footer-title{
+        position: absolute;
+        top: 340px;
+        left: 300px;
+    }
 }
