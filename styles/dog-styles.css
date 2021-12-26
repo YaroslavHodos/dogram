@@ -82,8 +82,9 @@ body, html{
     }
     .logo-title{
         position: absolute;
-        left: 168px;
+        left: 315px;
         display: inline-block;
+        z-index: 1;
         
     }
     .details-container{
