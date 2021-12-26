@@ -69,8 +69,8 @@ body, html{
         flex-direction: column;
         flex-wrap: nowrap;
         order: -1;
-        max-height: 360px;
-        top: 1px;
+        max-height: 350px;
+        width: 152px;
         display: flow-root;
         position: relative;
     }
