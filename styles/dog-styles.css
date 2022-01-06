@@ -27,7 +27,7 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    max-height: 25vh;
+    max-height: 35vh;
     overflow-y: auto;
     justify-content: space-around;
     list-style: none;
@@ -51,6 +51,14 @@ body {
     flex-direction: column;
     align-items: center;
 }
+.hide-button{
+    position: absolute;
+    right: 10vw;
+    top: 2vw;
+}
+.hidden .details-container{
+    display: none;
+}
 .thumbnails-title{
     display: block;
     text-align: center;
@@ -68,6 +76,10 @@ body {
     overflow: hidden;
     max-width: var(--thumbnails-image-width);
     min-height: calc(var(--thmbnails-image-heigth) + var(--thumbnails-title-heigth));
+}
+.selected.thumbnails-item {
+    border-radius: 0;
+    border: 3px solid green;
 }
 .thumbnails-anchor{
     text-decoration: none;
@@ -130,12 +142,14 @@ body, html{
     .details-image{
         width: 60vw;
         height: 55vw;
-        /* border-radius: 15%;
-        overflow: hidden; */
+        border-radius: 15%;
+        overflow: hidden;
     }
     .details-title{
-        left: -4vw;
-        bottom: 2vw;
+        /* left: -4vw;
+        bottom: 2vw; */
+        font-size: 1.7rem;
+            bottom: 5vh;
 
     }
     .main-content{
@@ -163,7 +177,7 @@ body, html{
             --details-image-heugth: 38vw;
         }
         .logo-title{
-            font-size: 2rem;
+            font-size: 1,5rem;
         }
         .details-image{
             border-radius: 15%;
@@ -173,8 +187,9 @@ body, html{
             bottom: 5vh;
         }
         .thumbnails-list{
-            max-width: 80vh;
+            max-width: 85vh;
             margin: 0;
+            padding-right: 2vw;
         }
         .thumbnails-item{
             min-height: 13.5vw;
@@ -183,7 +198,7 @@ body, html{
             font-size: 1.5rem;
         }
         .footer-title{
-            font-size: 1.5rem;
+            /* font-size: 1.5rem; */
         }
     }
 }
