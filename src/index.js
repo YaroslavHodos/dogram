@@ -28,9 +28,17 @@ function setDetails(anchor){
     detailsTitle.textContent = `${thumbnaisTitleEl.textContent}: ${anchor.getAttribute('data-details-title')}`;
     
 }
-function showDetails(){
+function showDetails(anchor){
     mainContentEl.classList.remove('hidden');
+    detailsImage.parentElement.classList.add('is-tiny');
+    setTimeout(removeIsTiny,1);
+}
+function removeIsTiny(){
+    detailsImage.parentElement.classList.remove('is-tiny');
 }
 function hideDetails(){
     mainContentEl.classList.add('hidden');
+    if (selectedItem) {
+        selectedItem.classList.remove('selected');
+    }
 }
